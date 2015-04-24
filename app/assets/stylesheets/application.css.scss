@@ -26,11 +26,15 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
 }
 
+p {
+	font-family: Avenir
+}
+
 nav {
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 	.navbar-brand {
 		a {
-			color: #BD1E23;
+			color: black;
 			font-weight: bold;
 			&:hover {
 				text-decoration: none;
@@ -115,3 +119,75 @@ nav {
 textarea {
 	min-height: 250px;
 }
+
+#comments {
+	padding-bottom: 4rem;
+	width: 50%;
+	.comment_count {
+		border-bottom: 1px solid #E9E9E9;
+		padding-bottom: .5rem;
+		margin-bottom: 0;
+	}
+	.comment {
+		padding: 2rem 0;
+		border-bottom: 1px solid #E9E9E9;
+		padding-left: 5%;
+		.username {
+			font-size: 1.3rem;
+			color: #333233;
+			margin: 0 0 .5rem 0;
+		}
+		.content {
+			margin: 0;
+			color: #969696;
+		}
+	}
+	.comment_content {
+		margin-top: 2.5rem;
+		textarea {
+			width: 100%;
+			margin: 1rem 0;
+			min-height: 150px;
+			border: 1px solid #E4E4E4;
+			background: #F8F9FA;
+			border-radius: 0.3rem;
+		}
+	}
+}
+
+.profile-picture {
+	border-radius: 10%;
+}
+
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #fff;
+}
+
+a.data {
+  background: transparent;
+  float: right;
+  color: black;
+  margin-top: -12%;
+  margin-right: 3%;
+  font-family: Avenir;
+  font-size: 11px
+}
+
+div.comment {
+font-size: 11px;	
+}
+
+div.comment img { 
+  position: relative;
+  float: left;
+  margin-right: 15px;
+  margin-top: .5%;
+  width: 50px;
+}
+
+
+ 
