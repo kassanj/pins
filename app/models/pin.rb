@@ -2,9 +2,14 @@ class Pin < ActiveRecord::Base
   acts_as_votable
   belongs_to :user
   has_many :comments
-  
-  has_attached_file :image, :styles => { :medium => "300x300>" }
+
+if Rails.env.development?
+  has_attached_file :image, :styles => { :medium => "300x300>" },
+else
+  has_attached_file :image, :styles => { :medium => "300x300>" },
             :storage => :dropbox,
             :dropbox_credentials => Rails.root.join("config/dropbox.yml")
-  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+            validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+            :path => ":style/:id_:filename"
+end
 end
