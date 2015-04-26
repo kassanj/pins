@@ -19,5 +19,3 @@
 # Ignore application configuration
 /config/application.yml
 
-# Ignore files uploaded on localhoset
-/public/system
